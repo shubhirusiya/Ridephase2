@@ -1,0 +1,53 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  
+  /* Add your existing landing page styles below */
+  .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 0.3rem;
+    font-size: 1.7rem;
+  }
+  
+  .logo img {
+    width: 4rem;
+  }
+  
+  nav {
+    display: flex;
+    column-gap: 2rem;
+  }
+  
+  nav a {
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #007BFF;
+  }
+  
+  .login-signup-button button {
+    background-color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #007BFF;
+    margin-left: 1rem;
+  }
+  
+  .login-signup-button button:hover {
+    background-color: #007BFF;
+    color: white;
+  }
