@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../CSS/nav.css';
 import {auth,provider} from "../config/firebaseconfig";
+import { Link } from 'react-router-dom'; 
 import { signInWithPopup, signOut } from 'firebase/auth';
 
 
@@ -10,7 +11,7 @@ export default function Nav() {
     const [value, setvalue]= useState(false)
 
     const signInWithGoogle=()=>{
-        signInWithPopup(auth,provider).then((result)=>{
+        signInWithPopup(auth,provider).then(async (result)=>{
 
             if(result)
             {
@@ -19,8 +20,46 @@ export default function Nav() {
                 setvalue(true)
             }
 
+
+            const userdata={
+                email: result.user.email,
+                displayName: result.user.displayName,
+                photoURL: result.user.photoURL
+            }
+
+        try{
+
+            const response = await fetch('http://localhost:5000/api/auth',{
+                method:'POST',
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+
+                body:JSON.stringify(userdata)
+                
+
+
+
             
             
+        })
+
+        if(response)
+        {
+            console.log("USER DATA SENT TO BACKEND")
+            console.log(response)
+        }
+
+    }catch(error)
+    {
+        console.log("Error sending user data to backend",error)
+    }
+
+
+
+
+
+
         })
     }
 
@@ -46,10 +85,10 @@ return (
                     <h3>BrainBridges</h3>
                 </div>
                 <nav>
-                    <a href="#">Home</a>
-                    <a href="/myprofile">My Profile</a>
+                    <Link to='/'>Home</Link>
+                    <Link to='/profile'>My profile</Link>
                     <a href="messages.html">Messages</a>
-                    <a href="/showrequest">Requests</a>
+                    <Link to='/request'>Request</Link>
                     <a href="about.html">About Us</a>
                     <a href="partnership.html">Settings</a>
                 </nav>
