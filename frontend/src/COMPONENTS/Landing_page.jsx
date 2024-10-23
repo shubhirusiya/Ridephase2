@@ -28,13 +28,15 @@ export default function Landing_page() {
           <br />
           "Unleash Innovation, Code the Future"
         </div>
+        
         <p>
           At BrainBridges, we ignite innovation by turning your ideas into reality through our dynamic hackathons. Collaborate with like-minded individuals and industry experts, pushing your boundaries with real-world challenges that test your skills and inspire creativity. Our events cater to both beginners and seasoned coders, offering mentorship, workshops, and hands-on experience to enhance your skillset. Stand out by showcasing your talent to potential employers and investors, while enjoying fun activities, social events, and the chance to win amazing prizes that celebrate your hard work and innovation.
         </p>
+        
       </div>
 
       <div className="feature-container">
-        <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px' }}>
+        <div className='feature1'>
           <div className="feature-box">
             <h3>Form Professional Teams</h3>
             <p>Form professional teams with experts in various fields for your projects or business ventures.</p>
@@ -45,8 +47,8 @@ export default function Landing_page() {
             <p style={{ fontSize: '1.2em' }}>Connect with experts in various fields to collaborate on projects or business ventures. Whether you're looking to develop a new tech startup or innovate within an existing project, Brain Bridges provides a platform to assemble skilled teams tailored to your need.</p>
           </div>
         </div>
-
-        <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px' }}>
+<br />
+        <div className='feature2'>
           <div className="feature-description">
             <h3 className="heading">Explore Hackathons</h3>
             <p style={{ fontSize: '1.2em' }}><span className="sub-heading">1. Upcoming Events:</span> Discover a comprehensive calendar of upcoming hackathons categorized by date and location. Stay updated on registration deadlines and event details to plan your participation effectively.</p>

@@ -7,11 +7,12 @@ body {
   }
 
   header {
-    background-color: #7fb9f4;
+    background-color: #f9fafa;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid lightgrey;
   }
 
   nav ul {
